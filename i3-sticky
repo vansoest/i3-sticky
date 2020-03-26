@@ -27,7 +27,7 @@ STICKY_GROUP = re.compile(r'^_sticky_([^_]+)$')
 
 def get_marks(i3):
     """ Returns a list of all currently used marks. """
-    return json.loads(i3.message(i3ipc.MessageType.GET_MARKS, ''))
+    return i3.get_marks()
 
 def get_groups(i3):
     """ Returns a list of sticky groups currently in use. """
